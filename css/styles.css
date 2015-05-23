@@ -4,14 +4,14 @@ body {
 }
 
 iframe {
-    display: none;   
+    display: none;
 }
 
 .illustration-container {
     height: 100vh;
     width: 100vw;
     background-color: #d7ede6;
-    background-image: url('images/landing-background.svg');
+    background-image: url('../images/landing-background.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -20,11 +20,12 @@ iframe {
 .logo-container {
     width: 100%;
     height: 45vh;
-    background-image: url('images/wildhacks-logo.svg');
+    background-image: url('../images/wildhacks-logo.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 150px;
     margin-bottom: -50px;
+    z-index: 4;
 }
 
 .clouds-container {
@@ -33,18 +34,35 @@ iframe {
 }
 
 .cloud {
-    position: absolute;   
+    position: absolute;
+    opacity: .8;
 }
 
 #cloud1 {
-    left: 200px;
     top: 50px;
+    z-index: 5;
 }
 
 #cloud2 {
     transform: scale(.8);
-    left: 700px; 
-}  
+    z-index: 3;
+}
+
+#cloud3 {
+    transform: scale(.5);
+    top: 100px;
+    z-index: 2;
+}
+
+#cloud4 {
+    transform: scale(.6);
+    z-index: 3;
+}
+
+#cloud5 {
+    top: 20px;
+    z-index: 3;
+}
 
 h1,
 h2 {
@@ -55,13 +73,13 @@ h2 {
 }
 
 h1 {
-    color: #788f9b;
+    color: #fcb64d;
     font-size: 5em;
     line-height: 80px;
 }
 
 h2 {
-    color: #546e7a;
+    color: #FFD740;
     font-size: 2em;
 }
 
@@ -97,7 +115,7 @@ a:focus {
 }
 
 .email {
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
 
 .form-control,
