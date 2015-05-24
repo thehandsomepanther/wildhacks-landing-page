@@ -1,6 +1,5 @@
 body {
     overflow: hidden;
-    background-color: #fcb64d;
 }
 
 iframe {
@@ -26,6 +25,11 @@ iframe {
     background-size: 150px;
     margin-bottom: -50px;
     z-index: 4;
+    opacity: 1;
+}
+
+.info-container {
+    opacity: 1;   
 }
 
 .clouds-container {

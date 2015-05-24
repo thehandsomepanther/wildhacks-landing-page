@@ -1,53 +1,64 @@
 $(document).ready(function () {
 
+    var cloud1Start = 600;
+    var cloud2Start = 900;
+    var cloud3Start = 300;
+    var cloud4Start = 0;
+    var cloud5Start = 1200;
+
     var leftBound = window.innerWidth;
     leftBound = leftBound.toString() + 'px';
-    
+
     function moveClouds() {
         $('#cloud1').css({
-            right: -50
+            right: cloud1Start
         });
         $('#cloud1').animate({
             right: leftBound,
         }, 40000, 'linear', function () {
             moveClouds();
         });
-        
+        cloud1Start = -50;
+
         $('#cloud2').css({
-            right: -50
+            right: cloud2Start
         });
         $('#cloud2').animate({
             right: leftBound,
         }, 100000, 'linear', function () {
             moveClouds();
         });
-        
+        cloud2Start = -50;
+
         $('#cloud3').css({
-            right: -50
+            right: cloud3Start
         });
         $('#cloud3').animate({
             right: leftBound,
         }, 60000, 'linear', function () {
             moveClouds();
         });
-        
+        cloud3Start = -50;
+
         $('#cloud4').css({
-            right: -50
+            right: cloud4Start
         });
         $('#cloud4').animate({
             right: leftBound,
         }, 80000, 'linear', function () {
             moveClouds();
         });
-        
+        cloud4Start = -50;
+
         $('#cloud5').css({
-            right: -50
+            right: cloud5Start
         });
         $('#cloud5').animate({
             right: leftBound,
-        }, 200000, 'linear', function () {
+        }, 20000, 'linear', function () {
             moveClouds();
         });
+        cloud5Start = -50;
     }
 
     moveClouds();
