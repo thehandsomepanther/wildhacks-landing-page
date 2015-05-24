@@ -97,11 +97,16 @@ li {
     letter-spacing: 3px;
 }
 
+a {
+    color: #36464e;   
+}
+
 a:hover,
 a:visited,
 a:active,
 a:focus {
     color: #fcb64d;
+    cursor: pointer;
 }
 
 .navbar-container {
@@ -120,6 +125,10 @@ a:focus {
 
 .email {
     margin-bottom: 10px;
+}
+
+.sponsor-link {
+    text-align: center;   
 }
 
 .form-control,

@@ -79,6 +79,7 @@ $(document).ready(function () {
                     console.log(result);
                 });
         } else {
+            
             $('.illustration-container').animate({
                 backgroundColor: '#EF9A9A'
             });
