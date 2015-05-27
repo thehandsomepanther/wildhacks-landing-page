@@ -80,6 +80,9 @@ $(document).ready(function () {
                 .done(function (result) {
                     console.log(result);
                 });
+            
+            $('#submit-button').attr('disabled', 'true');
+            $('#submit-button').html('Thanks for signing up!');
         } else {
             
             $('.illustration-container').animate({

@@ -151,6 +151,10 @@ input[type='text'] {
     background-color: #fcb64d;
 }
 
+.nav {
+    z-index: 99;   
+}
+
 .btn {
     width: 100%;
 }
