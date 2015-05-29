@@ -1,66 +1,68 @@
 $(document).ready(function () {
 
-    var cloud1Start = 600;
-    var cloud2Start = 900;
-    var cloud3Start = 300;
-    var cloud4Start = 0;
-    var cloud5Start = 1200;
+    var cloudStart = [600, 900, 300, 0, 1200];
     
     var actualStart = -200;
 
     var leftBound = window.innerWidth;
     leftBound = leftBound.toString() + 'px';
 
+    for (var i = 0; i < cloudStart.length; i++) {
+        if (cloudStart[i] > leftBound) {
+            cloudStart[i] = cloudStart[i] % leftBound;   
+        }
+    }
+    
     function moveClouds() {
         $('#cloud1').css({
-            right: cloud1Start
+            right: cloudStart[0]
         });
         $('#cloud1').animate({
             right: leftBound,
         }, 40000, 'linear', function () {
             moveClouds();
         });
-        cloud1Start = actualStart;
+        cloudStart[0] = actualStart;
 
         $('#cloud2').css({
-            right: cloud2Start
+            right: cloudStart[1]
         });
         $('#cloud2').animate({
             right: leftBound,
         }, 100000, 'linear', function () {
             moveClouds();
         });
-        cloud2Start = actualStart;
+        cloudStart[1] = actualStart;
 
         $('#cloud3').css({
-            right: cloud3Start
+            right: cloudStart[2]
         });
         $('#cloud3').animate({
             right: leftBound,
         }, 60000, 'linear', function () {
             moveClouds();
         });
-        cloud3Start = actualStart;
+        cloudStart[2] = actualStart;
 
         $('#cloud4').css({
-            right: cloud4Start
+            right: cloudStart[3]
         });
         $('#cloud4').animate({
             right: leftBound,
         }, 80000, 'linear', function () {
             moveClouds();
         });
-        cloud4Start = actualStart;
+        cloudStart[3] = actualStart;
 
         $('#cloud5').css({
-            right: cloud5Start
+            right: cloudStart[4]
         });
         $('#cloud5').animate({
             right: leftBound,
         }, 20000, 'linear', function () {
             moveClouds();
         });
-        cloud5Start = actualStart;
+        cloudStart[4] = actualStart;
     }
 
     moveClouds();
