@@ -14,6 +14,7 @@ iframe {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
+    overflow: hidden;
 }
 
 .logo-container {
@@ -210,7 +211,8 @@ input[type='text'] {
 
 @media (min-width: 641px) {
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-        h1 {
+    
+    h1 {
         font-size: 4em;
         margin-top: 90px;
         line-height: 0px;
